@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>S'Inscrire</h1>
+    <form class="form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="Ex. pat@example.com"
+        />
+        <mat-error
+          *ngIf="signupForm.hasError('email') && !signupForm.hasError('required')"
+        >
+          entrer un email valide
+        </mat-error>
+        <mat-error *ngIf="signupForm.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>nom d'utilisateur</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>mot de pass</mat-label>
+        <input matInput formControlName="password" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>comfirmer le mot de pass</mat-label>
+        <input matInput formControlName="confirmPassword" />
+      </mat-form-field>
+      <button type="submit" mat-stroked-button>soumettre</button>
+    </form>
+  </div>
+  

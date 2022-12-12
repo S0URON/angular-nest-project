@@ -1,0 +1,29 @@
+.container {
+  margin: 10vh auto;
+  width: 70%;
+}
+
+.card {
+  margin: 2vh auto;
+}
+
+button {
+  margin: 1vw;
+}
+
+.breif {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link routerLink="/liste-articles">Tous Les Articles</a>
+    <a *ngIf="loggedIn" mat-tab-link routerLink="/mes-articles">Mes Articles</a>
+    <a *ngIf="loggedIn" mat-tab-link routerLink="/ajouter-article"
+      >Publier Un Article</a
+    >
+    <button *ngIf="loggedIn" (click)="logout()" mat-tab-link>se deconnecter</button>
+    <a *ngIf="!loggedIn" mat-tab-link routerLink="/login">se connecter</a>
+    <a *ngIf="!loggedIn" mat-tab-link routerLink="/signup">s'inscrire</a>
+  </nav>
+</div>

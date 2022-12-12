@@ -1,0 +1,35 @@
+<div class="container">
+    <form class="form" [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+        <mat-label>Titre de l'article</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="title"
+        />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Contenu</mat-label>
+        <textarea matInput formControlName="content"></textarea>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>couleur du text</mat-label>
+        <input matInput type="color" formControlName="textColor"/>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>couleur de font</mat-label>
+        <input matInput type="color" formControlName="backgoundColor" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>police</mat-label>
+        <select matNativeControl formControlName="textFont">
+            <option value="Roboto">Roboto</option>
+            <option value="Arial">Arial</option>
+            <option value="Poppins">Poppins</option>
+            <option value="Inter">Inter</option>
+          </select>
+      </mat-form-field>
+      <button type="submit" mat-stroked-button>soumettre</button>
+    </form>
+  </div>
+  

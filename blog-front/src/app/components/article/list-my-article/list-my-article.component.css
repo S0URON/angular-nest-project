@@ -1,0 +1,22 @@
+.card {
+  border: 1px solid black;
+  border-radius: 10px;
+  min-width: 200px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.text,
+h1 {
+  padding: 10px;
+  text-transform: capitalize;
+  margin: auto;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

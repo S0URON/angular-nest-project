@@ -1,0 +1,38 @@
+<div class="header">
+  <nav mat-tab-nav-bar>
+    <a (click)="logout()" mat-tab-link>se deconnecter</a>
+  </nav>
+</div>
+
+<div class="container">
+  <mat-accordion *ngFor="let article of listeArticles">
+    <mat-expansion-panel class="card">
+      <mat-expansion-panel-header style="height: 70px">
+        <mat-panel-title> {{ article.title }} </mat-panel-title>
+        <mat-panel-description>
+          <div class="breif">
+            <p>posté par {{ article.sender.username }}</p>
+            <p>le {{ article.createdAt }}</p>
+          </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div>
+        <p>{{ article.content }}</p>
+        <button
+          mat-stroked-button
+          color="primary"
+          (click)="handleApprove(article._id, 'APPROVED')"
+        >
+          approver
+        </button>
+        <button
+          mat-flat-button
+          color="warn"
+          (click)="handleApprove(article._id, 'DECLINED')"
+        >
+          decliner
+        </button>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

@@ -1,0 +1,17 @@
+.container, .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:5vh auto;
+    width: 70%;
+}
+
+.full-width {
+    margin:2vh auto;
+    width: 50%;
+}
+
+button {
+    margin: 5vh auto;
+}
